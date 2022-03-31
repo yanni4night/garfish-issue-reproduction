@@ -1,5 +1,7 @@
+import { delay } from './app-foo/delay.js';
+
 const Garfish = window.Garfish.default;
-const gar = Garfish.run({
+Garfish.run({
     basename: "/",
     domGetter: "#app",
     apps: [
@@ -11,17 +13,29 @@ const gar = Garfish.run({
             activeWhen: () => location.hash.startsWith('#/foo'),
             entry: "http://localhost:9000",
         },
+        {
+            name: "bar",
+            sandbox: {
+                open: false,
+            },
+            activeWhen: () => location.hash.startsWith('#/bar'),
+            entry: "http://localhost:7309",
+        },
     ],
-    errorMountApp: (error, appInfo) => {
-        console.error(error);
-        alert(`${appInfo.name} is ESM,\n
-loading encounters: ${error.message}.\n
-But it SHOULD SUCCESS.`);
-    }
+    errorMountApp(error, appInfo) {
+        console.error(appInfo.name, error);
+    },
 });
 
-// Display ESM
-fetch("http://localhost:9000/foo.js").then(res => res.text()).then((text) => {
-    document.querySelector('#foo-code').innerText = text;
+document.querySelector('#reload').addEventListener('click', () => {
+    location.replace('/');
+});
+
+document.querySelector('#exp').addEventListener('click', async () => {
+    location.hash = '#/foo';
+    await delay(500);
+    location.hash = '#/bar';
+    await delay(50);
+    location.hash = '#/foo';
 });
 
