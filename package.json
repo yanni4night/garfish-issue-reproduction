@@ -1,0 +1,24 @@
+{
+  "name": "garfish-issue-reproduction",
+  "version": "1.0.0",
+  "description": "Garfish issue reproduction",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/yanni4night/garfish-issue-reproduction.git"
+  },
+  "keywords": [
+    "garfish",
+    "reproduction",
+    "issue"
+  ],
+  "author": "yanni4night@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yanni4night/garfish-issue-reproduction/issues"
+  },
+  "homepage": "https://github.com/yanni4night/garfish-issue-reproduction#readme"
+}
