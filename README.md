@@ -1,11 +1,9 @@
 # garfish-issue-reproduction
 
-复现 <https://github.com/modern-js-dev/garfish/issues/446>
+复现 <https://github.com/modern-js-dev/garfish/issues/447>
 
 ```sh
 npm ci && npm start
 ```
 
-浏览器打开 <http://localhost:8000/#/foo> 观察文案样式。
-
-> 打开 <http://localhost:9000/> 可见正确样式。
+浏览器打开 <http://localhost:8000/#/foo> 观察报错。

@@ -8,12 +8,22 @@ width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-sc
         <meta name="format-detection" content="telephone=no">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <title></title>
-        <style></style>
-        <!-- <link rel="stylesheet" href="xxx.css"> -->
+        <style>
+            code {
+                border: 1px solid #ccc;
+                color: #333;
+                display: block;
+                padding: 10px;
+            }
+        </style>
     </head>
     <body>
         <div id="app"></div>
+        <figure>
+            <figcaption>Foo app's ESM code:</figcaption>
+            <code><pre id="foo-code"></pre></code>
+        </figure>
         <script src="https://unpkg.com/garfish@1.4.4/dist/iife/index.js"></script>
-        <script src="./main.js"></script>
+        <script type="module" src="./main.js"></script>
     </body>
 </html>
