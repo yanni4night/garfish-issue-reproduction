@@ -1,4 +1,6 @@
 @import "./box.css";
+@import "https://unpkg.com/normalize.css@8.0.1/normalize.css";
+@import url(   "./align(1).css" );
 
 .foo {
     border: 4px green solid;

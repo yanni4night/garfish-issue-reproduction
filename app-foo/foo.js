@@ -1,7 +1,7 @@
 const provider = () => {
     return {
         render({ dom }) {
-            dom.innerHTML = '<div class="foo">This text should be <strong>red</strong> with green border.</div>'
+            dom.innerHTML = '<div class="foo box align">This text should be <strong>red</strong> and <strong>uppercase</strong> with green border.</div>'
         },
         destroy() { },
     }
