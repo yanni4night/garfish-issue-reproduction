@@ -1,6 +1,6 @@
 import { delay } from './app-foo/delay.js';
 
-const Garfish = window.Garfish.default;
+const Garfish = window.Garfish;
 Garfish.run({
     basename: "/",
     domGetter: "#app",
@@ -33,9 +33,8 @@ document.querySelector('#reload').addEventListener('click', () => {
 
 document.querySelector('#exp').addEventListener('click', async () => {
     location.hash = '#/foo';
-    await delay(500);
+    await delay(20);
     location.hash = '#/bar';
-    await delay(50);
     location.hash = '#/foo';
 });
 

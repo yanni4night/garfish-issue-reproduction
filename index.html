@@ -7,7 +7,7 @@
 width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
         <meta name="format-detection" content="telephone=no">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-        <title>garfish issue #448</title>
+        <title>garfish issue #562</title>
         <style>
             :target {
                 border: 1px solid brown;
@@ -27,16 +27,16 @@ width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-sc
     </head>
     <body>
         <ol>
-            <li><a id="/foo" href="#/foo">foo(have a 1000ms delay before mount)</a></li>
-            <li><a id="/bar" href="#/bar">bar(no delay before mount)</a></li>
+            <li><a id="/foo" href="#/foo">foo</a></li>
+            <li><a id="/bar" href="#/bar">bar</a></li>
         </ol>
         <p><strong>Please <button type="button" id="reload">❗️ reload this page</button> at <i>/</i> without hash before click the following button.</strong></p>
-        <button type="button" id="exp">🛎 reproduce #448 issue</button>
-        <p>The button above will assign location.hash <i>/foo(wait 500ms)</i>=><i>/bar(wait 50ms)</i>=><i>/foo</i>.</p>
+        <button type="button" id="exp">🛎 reproduce #562 issue</button>
+        <p>The button above will assign location.hash <i>/foo(wait 20ms)</i>=><i>/bar</i>=><i>/foo</i>.</p>
         <p>Obviously we expect the final app mounted should be <i>foo</i>. You will see text <q>foo mounted</q> in the following box.</p>
-        <p>But I see nothing, which indicates that <i>foo</i> does not mount successfully.</p>
+        <p>But I see "bar mounted", which indicates that <i>foo</i> does not mount correctly.</p>
         <div id="app"></div>
-        <script src="https://unpkg.com/garfish@1.4.4/dist/iife/index.js"></script>
+        <script src="https://unpkg.com/garfish@1.11.3/dist/iife/index.js"></script>
         <script type="module" src="./main.js"></script>
     </body>
 </html>
