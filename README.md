@@ -1,6 +1,6 @@
 # garfish-issue-reproduction
 
-复现 <https://github.com/modern-js-dev/garfish/issues/448>
+复现 <https://github.com/modern-js-dev/garfish/issues/562>
 
 ```sh
 npm ci && npm start
